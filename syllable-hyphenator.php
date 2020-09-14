@@ -86,6 +86,7 @@ class SyllableHyphenator
         $twig->addFilter(new Timber\Twig_Filter('hyphenate', function ($text) {
             return $this->hyphenate($text);
         }));
+      return $twig;
     }
 
     function hyphenate($string)
