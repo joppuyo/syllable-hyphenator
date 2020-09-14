@@ -17,7 +17,6 @@ use Vanderlee\Syllable\Syllable;
 
 class SyllableHyphenator
 {
-
     private $active = true;
 
     /**
@@ -36,7 +35,9 @@ class SyllableHyphenator
         if (file_exists($temp_dir)) {
             Syllable::setCacheDir($temp_dir);
         } else {
-            error_log('Syllable Hyphenator: failed to create temporary directory');
+            error_log(
+                'Syllable Hyphenator: failed to create temporary directory'
+            );
             Syllable::setCacheDir(null);
         }
         $wp_locale = get_locale();
@@ -47,23 +48,28 @@ class SyllableHyphenator
         }
 
         $locale = $this->map_locale($wp_locale);
-        $locale = apply_filters('`syllable_hyphenator_current_locale`', $locale);
+        $locale = apply_filters(
+            '`syllable_hyphenator_current_locale`',
+            $locale
+        );
 
         if (empty($locale)) {
             $this->active = false;
-              return;
+            return;
         }
 
         $this->syllable = new Syllable($locale);
 
-        $min_word_length = apply_filters('syllable_hyphenator_min_word_length', 12);
+        $min_word_length = apply_filters(
+            'syllable_hyphenator_min_word_length',
+            12
+        );
 
         $this->syllable->setMinWordLength($min_word_length);
     }
 
     public function init_updater()
     {
-
         $update_checker = Puc_v4_Factory::buildUpdateChecker(
             'https://github.com/joppuyo/syllable-hyphenator',
             __FILE__,
@@ -83,15 +89,16 @@ class SyllableHyphenator
 
     function add_twig_filter($twig)
     {
-        $twig->addFilter(new Timber\Twig_Filter('hyphenate', function ($text) {
-            return $this->hyphenate($text);
-        }));
+        $twig->addFilter(
+            new Timber\Twig_Filter('hyphenate', function ($text) {
+                return $this->hyphenate($text);
+            })
+        );
         return $twig;
     }
 
     function hyphenate($string)
     {
-
         if ($this->active) {
             return $this->syllable->hyphenateText($string);
         }
@@ -158,7 +165,9 @@ class SyllableHyphenator
             'tr_TR' => 'tr',
             'uk' => 'uk',
         ];
-        return !empty($locale_array[$wp_locale]) ? $locale_array[$wp_locale] : null;
+        return !empty($locale_array[$wp_locale])
+            ? $locale_array[$wp_locale]
+            : null;
     }
 }
 
