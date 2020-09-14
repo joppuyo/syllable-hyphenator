@@ -30,6 +30,9 @@ jobs:
       if: steps.composer-cache.outputs.cache-hit != 'true'
       run: composer install --prefer-dist --no-progress --no-suggest
 
+    - name: Remove
+      run: rm -fr .github node_modules .nvmrc .editorconfig .gitignore .prettierrc.js .git
+
     - uses: actions/upload-artifact@master
       with:
         name: syllable-hyphenator.zip
