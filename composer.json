@@ -1,5 +1,5 @@
 {
-    "name": "syllable-hyphenator",
+    "name": "joppuyo/syllable-hyphenator",
     "description": "Server-side hyphenation for WordPress with Syllable library",
     "require": {
         "vanderlee/syllable": "^1.5",
