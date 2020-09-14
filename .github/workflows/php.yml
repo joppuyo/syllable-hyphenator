@@ -35,5 +35,5 @@ jobs:
 
     - uses: actions/upload-artifact@master
       with:
-        name: syllable-hyphenator.zip
+        name: syllable-hyphenator
         path: .
