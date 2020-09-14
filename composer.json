@@ -1,0 +1,11 @@
+{
+    "require": {
+        "vanderlee/syllable": "^1.5",
+        "yahnis-elsts/plugin-update-checker": "^4.10"
+    },
+    "config": {
+        "platform": {
+            "php": "7.0.0"
+        }
+    }
+}
