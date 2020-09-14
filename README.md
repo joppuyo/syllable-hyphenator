@@ -4,10 +4,10 @@ Server-side hyphenation for WordPress with [Syllable](https://github.com/vanderl
 
 ## Compatiblity
 
-* PHP 7 +
-* WordPress 5.0 +
-* (Optional) Timber 1.10.0 +
-* (Optional) Polylang
+- PHP 7 +
+- WordPress 5.0 +
+- (Optional) Timber 1.10.0 +
+- (Optional) Polylang
 
 ## Usage
 
@@ -29,15 +29,15 @@ If you are using [Timber](https://www.upstatement.com/timber/), you can also use
 
 `syllable_hyphenator_min_word_length`
 
-By default, minimum word length for hyphenation is set to 12 characters. This prevents awkward hyphenation of very short words. 
+By default, minimum word length for hyphenation is set to 12 characters. This prevents awkward hyphenation of very short words.
 
 ```php
 add_filter('syllable_hyphenator_min_word_length', function () {
-    return 6;
+  return 6;
 });
 ```
 
-### WordPress language
+### WordPress locale
 
 `syllable_hyphenator_wp_locale`
 
@@ -45,7 +45,7 @@ Language used for hyphenation. By default this is the language specified in the 
 
 ```php
 add_filter('syllable_hyphenator_wp_locale', function () {
-    return 'en_US';
+  return 'en_US';
 });
 ```
 
@@ -53,10 +53,10 @@ add_filter('syllable_hyphenator_wp_locale', function () {
 
 `syllable_hyphenator_current_locale`
 
-This overrides the WordPress language. This is useful if you have different language content on your site. If Polylang is installed, the current Polylang post language will be used. Return value should be in Syllable library format, for example `en-us`. 
+This overrides the WordPress language. This is useful if you have different language content on your site. If Polylang is installed, the current Polylang post language will be used. Return value should be in Syllable library format, for example `en-us`.
 
 ```php
 add_filter('syllable_hyphenator_current_locale', function () {
-    return 'en-us';
+  return 'en-us';
 });
 ```
