@@ -2,7 +2,6 @@
   "name": "syllable-hyphenator",
   "dependencies": {
     "@prettier/plugin-php": "^0.14.3",
-    "husky": "^4.3.0",
     "prettier": "^2.1.1",
     "pretty-quick": "^3.0.2"
   },
@@ -10,5 +9,8 @@
     "hooks": {
       "pre-commit": "pretty-quick --staged"
     }
+  },
+  "devDependencies": {
+    "husky": "^4.3.0"
   }
 }
