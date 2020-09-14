@@ -51,7 +51,7 @@ class SyllableHyphenator
 
         if (empty($locale)) {
             $this->active = false;
-            return;
+              return;
         }
 
         $this->syllable = new Syllable($locale);
