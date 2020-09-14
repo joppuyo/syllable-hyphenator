@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "52dca6225e860c8338a6e3996d34bf28",
+    "content-hash": "105e404cd7f03aeb57412a9d3f6d4abf",
     "packages": [
         {
             "name": "vanderlee/syllable",
