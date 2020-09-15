@@ -1,5 +1,7 @@
 # Syllable Hyphenator
 
+![Screenshot of two WordPress pages. Normal on the left, hyphenated on the right](./syllable-hyphenator.png)
+
 Server-side hyphenation for WordPress with [Syllable](https://github.com/vanderlee/phpSyllable) library.
 
 ## Compatiblity
