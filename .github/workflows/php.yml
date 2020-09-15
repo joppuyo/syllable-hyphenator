@@ -37,3 +37,15 @@ jobs:
       with:
         name: syllable-hyphenator
         path: .
+
+    - name: Zip
+      if: startsWith(github.ref, 'refs/tags/')
+      run: zip -r syllable-hyphenator.zip .
+        
+    - name: Release
+      uses: softprops/action-gh-release@v1
+      if: startsWith(github.ref, 'refs/tags/')
+      with:
+        files: syllable-hyphenator.zip
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
