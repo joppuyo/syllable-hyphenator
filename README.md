@@ -11,6 +11,13 @@ Server-side hyphenation for WordPress with [Syllable](https://github.com/vanderl
 - (Optional) Timber 1.10.0 +
 - (Optional) Polylang
 
+## Installation
+
+1. Download latest version on the [Releases](https://github.com/joppuyo/syllable-hyphenator/releases) page.
+2. Upload plugin on the WordPress plugin admin page.
+3. Activate plugin.
+4. See section below on how to use the plugin in your theme
+
 ## Usage
 
 You can use the `hyphenate` WordPress filter to hyphenate text.
