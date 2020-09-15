@@ -1,8 +1,10 @@
 # Syllable Hyphenator
 
-![Screenshot of two WordPress pages. Normal on the left, hyphenated on the right](./syllable-hyphenator.png)
+[![Build Status](https://img.shields.io/github/workflow/status/joppuyo/syllable-hyphenator/PHP%20Composer?logo=github)](https://github.com/joppuyo/syllable-hyphenator/actions)
 
-Server-side hyphenation for WordPress with [Syllable](https://github.com/vanderlee/phpSyllable) library.
+Server-side hyphenation for WordPress with [Syllable](https://github.com/vanderlee/phpSyllable) library. It works by inserting `&shy;` or "soft hyphen" characters to your strings so browsers will automatically hyphenate the words correctly.
+
+![Screenshot of two WordPress pages. Normal on the left, hyphenated on the right](./syllable-hyphenator.png)
 
 ## Compatiblity
 
