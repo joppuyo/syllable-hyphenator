@@ -44,7 +44,9 @@ class SyllableHyphenator
         $wp_locale = apply_filters('syllable_hyphenator_wp_locale', $wp_locale);
         if (function_exists('pll_current_language')) {
             $locale_object = pll_current_language('OBJECT');
-            $wp_locale = $locale_object->locale;
+            if ($locale_object) {
+                $wp_locale = $locale_object->locale;
+            }
         }
 
         $locale = $this->map_locale($wp_locale);
