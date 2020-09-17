@@ -8,3 +8,11 @@ License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 Server-side hyphenation for WordPress with Syllable library
+
+== Changelog ==
+
+= 1.0.1 (2020-09-17) =
+* Fix: Fix notice in admin when "show all languages" is selected
+
+= 1.0.0 (2020-09-15) =
+* Initial release
