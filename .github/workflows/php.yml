@@ -36,7 +36,7 @@ jobs:
 
     - name: Zip
       if: startsWith(github.ref, 'refs/tags/')
-      run: zip -r syllable-hyphenator.zip .
+      run: rsync -av * syllable-hyphenator && zip -r syllable-hyphenator.zip syllable-hyphenator
         
     - name: Release
       uses: softprops/action-gh-release@v1
