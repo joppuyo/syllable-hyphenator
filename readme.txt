@@ -11,6 +11,9 @@ Server-side hyphenation for WordPress with Syllable library
 
 == Changelog ==
 
+= 1.0.2 (2020-09-20) =
+* Fix: Fix notice in admin when "show all languages" is selected
+
 = 1.0.1 (2020-09-17) =
 * Fix: Fix notice in admin when "show all languages" is selected
 
