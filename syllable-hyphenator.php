@@ -4,7 +4,7 @@
  * Plugin name: Syllable Hyphenator
  * Description: Server-side hyphenation for WordPress with Syllable library
  * Plugin URI: https://github.com/joppuyo/syllable-hyphenator
- * Version: 1.0.2
+ * Version: 1.0.3
  * Author: Johannes Siipola
  * Author URI: https://siipo.la
  * License: GPLv2 or later
