@@ -1,6 +1,7 @@
 # Syllable Hyphenator
 
 [![Build Status](https://img.shields.io/github/workflow/status/joppuyo/syllable-hyphenator/PHP%20Composer?logo=github)](https://github.com/joppuyo/syllable-hyphenator/actions)
+[![Inactively Maintained](https://img.shields.io/badge/Maintenance%20Level-Inactively%20Maintained-yellowgreen.svg)](https://gist.github.com/cheerfulstoic/d107229326a01ff0f333a1d3476e068d)
 
 ![Screenshot of two WordPress pages. Normal on the left, hyphenated on the right](./syllable-hyphenator.png)
 
