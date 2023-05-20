@@ -93,6 +93,7 @@ class SyllableHyphenator
         add_filter('init', [$this, 'init']);
         add_filter('init', [$this, 'init_updater']);
         add_filter('hyphenate', [$this, 'hyphenate'], 10, 1);
+        add_filter('syllable_hyphenate', [$this, 'hyphenate'], 10, 1);
         add_filter('timber/twig', [$this, 'add_twig_filter']);
     }
 
