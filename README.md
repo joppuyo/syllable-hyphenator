@@ -1,6 +1,6 @@
 # Syllable Hyphenator
 
-[![Build Status](https://img.shields.io/github/workflow/status/joppuyo/syllable-hyphenator/PHP%20Composer?logo=github)](https://github.com/joppuyo/syllable-hyphenator/actions)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/joppuyo/syllable-hyphenator/php.yml?branch=master&logo=github)](https://github.com/joppuyo/syllable-hyphenator/actions)
 [![Inactively Maintained](https://img.shields.io/badge/Maintenance%20Level-Inactively%20Maintained-yellowgreen.svg)](https://gist.github.com/cheerfulstoic/d107229326a01ff0f333a1d3476e068d)
 
 ![Screenshot of two WordPress pages. Normal on the left, hyphenated on the right](./syllable-hyphenator.png)
@@ -23,16 +23,27 @@ Server-side hyphenation for WordPress with [Syllable](https://github.com/vanderl
 
 ## Usage
 
-You can use the `hyphenate` WordPress filter to hyphenate text.
+You can use the `syllable_hyphenate` WordPress filter to hyphenate text.
 
 ```php
-echo '<h1>' . apply_filters('hyphenate', get_the_title($post)) . '</h1>';
+echo '<h1>' . apply_filters('syllable_hyphenate', get_the_title($post)) . '</h1>';
 ```
 
 If you are using [Timber](https://www.upstatement.com/timber/), you can also use the `hyphenate` Twig filter,
 
 ```twig
 <h1>{{ post.title | hyphenate }}</h1>
+```
+
+You can use the `syllable_hyphenate_html` filter to hyphenate a HTML string. For example, let's say you want to hyphenate output of Heading Gutenberg blocks. You can do it with the following code:
+
+```php
+add_filter('render_block', function ($content, $block) {
+    if ($block['blockName'] === 'core/heading') {
+        $content = apply_filters('syllable_hyphenate_html', $content);
+    }
+    return $content;
+}, 10, 2);
 ```
 
 ## Filters
