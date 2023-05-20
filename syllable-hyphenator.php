@@ -94,6 +94,7 @@ class SyllableHyphenator
         add_filter('init', [$this, 'init_updater']);
         add_filter('hyphenate', [$this, 'hyphenate'], 10, 1);
         add_filter('syllable_hyphenate', [$this, 'hyphenate'], 10, 1);
+        add_filter('syllable_hyphenate_html', [$this, 'hyphenate_html'], 10, 1);
         add_filter('timber/twig', [$this, 'add_twig_filter']);
     }
 
@@ -111,6 +112,14 @@ class SyllableHyphenator
     {
         if ($this->active) {
             return $this->syllable->hyphenateText($string);
+        }
+        return $string;
+    }
+
+    function hyphenate_html($string)
+    {
+        if ($this->active) {
+            return $this->syllable->hyphenateHtmlText($string);
         }
         return $string;
     }
