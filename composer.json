@@ -2,7 +2,7 @@
     "name": "joppuyo/syllable-hyphenator",
     "description": "Server-side hyphenation for WordPress with Syllable library",
     "require": {
-        "vanderlee/syllable": "^1.5",
+        "vanderlee/syllable": "dev-master",
         "yahnis-elsts/plugin-update-checker": "^4.10"
     },
     "config": {

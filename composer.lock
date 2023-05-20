@@ -4,33 +4,34 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "105e404cd7f03aeb57412a9d3f6d4abf",
+    "content-hash": "f5612bc5ef2c4e8144db9a06c13804e8",
     "packages": [
         {
             "name": "vanderlee/syllable",
-            "version": "1.5.3",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/vanderlee/phpSyllable.git",
-                "reference": "75410e1ccc1159f073f8671789df69c7f7d073cb"
+                "reference": "d47fe93afd3b698fb16f658df225dbbef851b871"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vanderlee/phpSyllable/zipball/75410e1ccc1159f073f8671789df69c7f7d073cb",
-                "reference": "75410e1ccc1159f073f8671789df69c7f7d073cb",
+                "url": "https://api.github.com/repos/vanderlee/phpSyllable/zipball/d47fe93afd3b698fb16f658df225dbbef851b871",
+                "reference": "d47fe93afd3b698fb16f658df225dbbef851b871",
                 "shasum": ""
             },
             "require": {
                 "ext-dom": "*",
                 "ext-json": "*",
+                "ext-libxml": "*",
                 "ext-mbstring": "*",
                 "php": ">=5.6"
             },
             "require-dev": {
-                "codacy/coverage": "1.*",
-                "phpmd/phpmd": "2.6.0",
-                "phpunit/phpunit": "6.*"
+                "ext-curl": "*",
+                "phpunit/phpunit": "^5.7 || ^6.5 || ^7.5 || ^8.5"
             },
+            "default-branch": true,
             "type": "library",
             "autoload": {
                 "psr-4": {
@@ -56,20 +57,24 @@
                 "text",
                 "words"
             ],
-            "time": "2019-12-16T12:52:46+00:00"
+            "support": {
+                "issues": "https://github.com/vanderlee/phpSyllable/issues",
+                "source": "https://github.com/vanderlee/phpSyllable/"
+            },
+            "time": "2023-05-14T21:48:11+00:00"
         },
         {
             "name": "yahnis-elsts/plugin-update-checker",
-            "version": "v4.10",
+            "version": "v4.13",
             "source": {
                 "type": "git",
                 "url": "https://github.com/YahnisElsts/plugin-update-checker.git",
-                "reference": "0edd15f67822464af8a23285ce367b30d515a855"
+                "reference": "6eb27a6911e0e0880d09e5b11f577d3f688f7da7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/YahnisElsts/plugin-update-checker/zipball/0edd15f67822464af8a23285ce367b30d515a855",
-                "reference": "0edd15f67822464af8a23285ce367b30d515a855",
+                "url": "https://api.github.com/repos/YahnisElsts/plugin-update-checker/zipball/6eb27a6911e0e0880d09e5b11f577d3f688f7da7",
+                "reference": "6eb27a6911e0e0880d09e5b11f577d3f688f7da7",
                 "shasum": ""
             },
             "require": {
@@ -79,7 +84,7 @@
             "type": "library",
             "autoload": {
                 "files": [
-                    "load-v4p10.php"
+                    "load-v4p13.php"
                 ]
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -102,13 +107,19 @@
                 "theme updates",
                 "wordpress"
             ],
-            "time": "2020-08-21T11:36:45+00:00"
+            "support": {
+                "issues": "https://github.com/YahnisElsts/plugin-update-checker/issues",
+                "source": "https://github.com/YahnisElsts/plugin-update-checker/tree/v4.13"
+            },
+            "time": "2022-07-29T12:36:25+00:00"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "vanderlee/syllable": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
@@ -116,5 +127,5 @@
     "platform-overrides": {
         "php": "7.0.0"
     },
-    "plugin-api-version": "1.1.0"
+    "plugin-api-version": "2.3.0"
 }
