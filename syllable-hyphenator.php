@@ -50,8 +50,15 @@ class SyllableHyphenator
         }
 
         $locale = $this->map_locale($wp_locale);
+
+        // Back compat
         $locale = apply_filters(
             '`syllable_hyphenator_current_locale`',
+            $locale
+        );
+
+        $locale = apply_filters(
+            'syllable_hyphenator_current_locale',
             $locale
         );
 
